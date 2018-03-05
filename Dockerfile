@@ -5,9 +5,9 @@ RUN apk add --update python py-pip
 
 #Bundle app source
 
-COPY runner.py /src/runner.py
+COPY runnable.py /src/runnable.py
 
 EXPOSE 8000
 
-CMD ["python","/src/runner.py","-p 8000"]
+CMD ["python","/src/runnable.py","-p 8000"]
 
