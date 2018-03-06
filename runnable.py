@@ -7,14 +7,16 @@ import datetime
 import sys
 # Figure out the current time of the snapshot
 # Checking if it is append or write operation
-if not (len(sys.argv) == 3):
-        print("Arguments: Specify the OUTPUT CSV FILE"),
-        sys.exit(1),
+#if not (len(sys.argv) == 3):
+#        print("Arguments: Specify the OUTPUT CSV FILE"),
+#        sys.exit(1),
 
 mode=""
 currentTime=datetime.datetime.now().timestamp()
-opFile=str(sys.argv[1])
-rootPath= str(sys.argv[2])
+##opFile=str(sys.argv[1])#
+#rootPath= str(sys.argv[2])
+opFile="outputfile.csv"
+rootPath="."
 jsonFile={}
 headers=['TimeStamp','TenantID','Metric','Value']
 
