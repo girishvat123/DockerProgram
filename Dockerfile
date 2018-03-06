@@ -1,7 +1,7 @@
 FROM alpine:3.1
 
 #Update
-RUN apk add --update python3 py-pip3
+RUN apk add --update python py-pip
 
 #Bundle app source
 
