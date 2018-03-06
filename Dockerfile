@@ -9,5 +9,5 @@ COPY runnable.py /src/runnable.py
 
 EXPOSE 8000
 
-CMD ["python","/src/runnable.py","/src/outputfile.csv","/src/","-p 8000"]
+CMD ["python","/src/runnable.py","-p 8000"]
 
