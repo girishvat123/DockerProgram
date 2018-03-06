@@ -16,5 +16,5 @@
 4. Build and upload the Docker image.
 5. Set up port mappings 
 6. Deploy your docker container.
-7. Now you can access your ````http://<-You Server’s IP Address->:portAddress ```
+7. Now you can access your ```http://<-You Server’s IP Address->:portAddress ```
 
