@@ -1,13 +1,13 @@
 FROM alpine:3.1
-FROM python:3
-#Update
-#RUN apk add --update python3 py-pip3
 
-#Bundle app source
+# Update
+RUN apk add --update python py-pip
 
-COPY runnable.py /src/runnable.py
+# Install app dependencies
+RUN pip install -r requirements.txt
 
-EXPOSE 8000
+# Bundle app source
+COPY runner.py /src/runner.py
 
-CMD ["python","/src/runnable.py","-p 8000"]
-
+EXPOSE  8000
+CMD ["python", "/src/runner.py", "-p 8000"]
