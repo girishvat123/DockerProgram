@@ -1,28 +1,20 @@
-# Consumer Data Collection 
+# Steps in Deploying your Python Application using Docker and Puppet
 
-This simple software extracts the data from mutliple `metrics.json` files corresponding to the consumers and 
-outputs the metrics data to a single csv file. This is primarily built for running on **python3**. If you have both versions of python 2 and 3 installed, please change the below commands for **python** to **python3** depending on what is the default python environment.
+## Prerequisites
+1. Github Account
+2. Docker Hub /Amazon Container Registry
+3. Web server that can deploy Python application with docker installed.
+4. A Distelli account (Build,deploy to any server in any programming language)
 
-## Steps for running it in your own local machine with the cloned repository
 
-1. Clone the repository:
-  ```git clone git://github.com/girishvat123/NetSkopeTakeHome``` 
+### Steps
 
-2. ```cd ConsumerDataCollection```
+1. Create a dockerfile 
+  Sample of it is given in the ```https://github.com/girishvat123/DockerProgram/blob/master/Dockerfile ```
+2. Docker file specifies the dependencies, environment to run in and whatever are the commands to run.
+3. Install Distalli Agent on your server
+4. Build and upload the Docker image.
+5. Set up port mappings 
+6. Deploy your docker container.
+7. Now you can access your ````http://<-You Server’s IP Address->:portAddress ```
 
-3. Run the following command:
-    ```./dist/runnable.exe <nameOfTheOutputFile> /path/to/jsonfilesfolder/```
-
-4. You can see the outputfile with the name you mentioned created in your directory. 
-
-## Steps for running the python script directly
-
-1. Clone the repository as mentioned in step 1 above section.
-
-2. ```cd ConsumerDataCollection```
-
-3. Run below command:
-
-   ```python runnable.py <nameOfTheOutputFile> /path/to/jsonfilesfolder/```
-
-4. You can see the outputfile with the name you mentioned created in your directory.    
